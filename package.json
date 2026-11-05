@@ -1,0 +1,21 @@
+{
+  "name": "sieve",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "N aday, testle eleme ve seçim üzerinden kod doğruluğunu ölçen düzenek",
+  "license": "PolyForm-Small-Business-1.0.0",
+  "scripts": {
+    "bench": "node bench/run.mjs",
+    "analyze": "node bench/analyze.mjs",
+    "test": "node --test",
+    "solve": "node bin/sieve.mjs solve",
+    "serve": "node bin/sieve.mjs serve"
+  },
+  "bin": {
+    "sieve": "bin/sieve.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,6 @@
+node_modules/
+sonuc/
+.env
+__pycache__/
+_taslak/
+DEVIR.md

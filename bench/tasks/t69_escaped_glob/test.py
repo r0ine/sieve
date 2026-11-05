@@ -1,0 +1,36 @@
+from solution import solve
+
+assert solve("a*b", "acb") is True
+assert solve("a\\*b", "a*b") is True
+assert solve("a?b", "ab") is False
+assert solve("", "") is True
+assert solve("", "a") is False
+assert solve("*", "") is True
+assert solve("*", "abc") is True
+assert solve("?", "a") is True
+assert solve("?", "") is False
+assert solve("?", "ab") is False
+assert solve("a*", "a") is True
+assert solve("a*", "abc") is True
+assert solve("*b", "b") is True
+assert solve("*b", "ab") is True
+assert solve("a**b", "ab") is True
+assert solve("a**b", "axxb") is True
+assert solve("a?b", "acb") is True
+assert solve("a?b", "a中b") is True
+assert solve("a?b", "a中中b") is False
+assert solve("\\?", "?") is True
+assert solve("\\?", "a") is False
+assert solve("\\*", "*") is True
+assert solve("\\\\", "\\") is True
+assert solve("a\\*b", "acb") is False
+assert solve("a\\?b", "a?b") is True
+assert solve("*?", "") is False
+assert solve("*?", "x") is True
+assert solve("?*", "x") is True
+assert solve("a*b*c", "axbyc") is True
+assert solve("a*b*c", "ac") is False
+assert solve("é", "e") is False
+assert solve("é", "é") is True
+assert solve("**", "") is True
+assert solve("a*b", "a\nb") is True
